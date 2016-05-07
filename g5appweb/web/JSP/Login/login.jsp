@@ -33,10 +33,10 @@
                             <div class="formulario_home">
                                   
                                     
-                                <%--campo usuario --%>
+                                <%--campo Email --%>
                             <p>
-                                <label>Usuario:</label>
-                                <input type="text" name="usuario" maxlength="15" value="${login.usuario}" />
+                                <label>Email:</label>
+                                <input type="text" name="email" maxlength="20" value="${login.email}" />
                             </p>
 
 

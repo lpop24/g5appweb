@@ -11,7 +11,7 @@ package g5appweb.vista.loggin;
  */
 public class LogginFrontBeans {
      private boolean denegado;  // mensaje de ""acceso Denegado""
-     private String usuario=""; // campo de usuario 
+     private String email=""; // campo de usuario 
      private String password=""; //  campo de contraseña
 
     /**
@@ -31,15 +31,15 @@ public class LogginFrontBeans {
     /**
      * @return the usuario
      */
-    public String getUsuario() {
-        return usuario;
+    public String getEmail() {
+        return email;
     }
 
     /**
      * @param usuario the usuario to set
      */
-    public void setUsuario(String usuario) {
-        this.usuario = usuario;
+    public void setEmail(String usuario) {
+        this.email = usuario;
     }
 
     /**

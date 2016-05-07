@@ -71,8 +71,8 @@ public class LogginServlet extends HttpServlet {
                   && (login != null)){
 
 
-              if(request.getParameter("usuario") != null) 
-                  login.setUsuario(request.getParameter("usuario"));
+              if(request.getParameter("email") != null) 
+                  login.setEmail(request.getParameter("email"));
               if(request.getParameter("password") != null) 
                   login.setPassword(request.getParameter("password"));
 
@@ -80,22 +80,22 @@ public class LogginServlet extends HttpServlet {
 
 
 
-              if ((!login.getUsuario().equals(""))                    
+              if ((!login.getEmail().equals(""))                    
                       && (!login.getPassword().equals(""))){
 
 
-              if  (((login.getUsuario().charAt(0)>=chVal1) && (login.getUsuario().charAt(0)<=chVal2))
-                || ((login.getUsuario().charAt(0)>=chVal3) && (login.getUsuario().charAt(0)<=chVal4))
-                || ((login.getUsuario().charAt(0)>=chVal3) && (login.getUsuario().charAt(0)<=chVal4))
-                || (login.getUsuario().charAt(0)==chVal5)
-                || (login.getUsuario().charAt(0)==chVal6)
-                || (login.getUsuario().charAt(0)==chVal7)
-                || (login.getUsuario().charAt(0)==chVal8)){
+              if  (((login.getEmail().charAt(0)>=chVal1) && (login.getEmail().charAt(0)<=chVal2))
+                || ((login.getEmail().charAt(0)>=chVal3) && (login.getEmail().charAt(0)<=chVal4))
+                || ((login.getEmail().charAt(0)>=chVal3) && (login.getEmail().charAt(0)<=chVal4))
+                || (login.getEmail().charAt(0)==chVal5)
+                || (login.getEmail().charAt(0)==chVal6)
+                || (login.getEmail().charAt(0)==chVal7)
+                || (login.getEmail().charAt(0)==chVal8)){
                        System.out.println(login.getPassword().charAt(0));     
                       //////////////////////////////////////////////////////////////////////////////
                       //TODO: preguntar en la permanencia si esta el usuario que login ha traido  //
                       //////////////////////////////////////////////////////////////////////////////                    
-                      if ((login.getUsuario().equals("root")) && (login.getPassword().equals("root"))){
+                      if ((login.getEmail().equals("root")) && (login.getPassword().equals("root"))){
                          dispatcher = getServletContext().getRequestDispatcher("/JSP/Listas/listaProyectos.jsp");
                          dispatcher.forward(request, response);                
                       } 
@@ -105,7 +105,7 @@ public class LogginServlet extends HttpServlet {
          }
 
 
-         login.setUsuario("");
+         login.setEmail("");
          login.setPassword("");
          session.setAttribute("login", login);
          dispatcher = getServletContext().getRequestDispatcher("/JSP/Login/login.jsp");
