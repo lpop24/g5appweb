@@ -31,20 +31,17 @@
                             <form action="" method="post" style="formulario_inscripcionII">                                                              
                                 <div class="formulario_home">
 
-                                    <%--Campo  Usuario --%>                                      
-                                    <c:if test="${newUser.usuarioNoVacio}" > 
-                                        <p class="informacion"> Usuario no puede estar vacio  </p>
-                                    </c:if>
-                                    <c:if test="${newUser.usuarioEmpiezaLetra}" > 
-                                        <p class="informacion"> Usuario deve empezar por letra </p>
-                                    </c:if>
-                                    <c:if test="${newUser.usuarioYaExistente}" > 
-                                        <p class="informacion"> Usuario ya existente, usa otro usuario</p>
-                                    </c:if>
                                     
+                                    <%--Campo  Email --%>
+                                    <c:if test="${newUser.correoNoVacio}" > 
+                                        <p class="informacion"> No puede quedar vacio Email </p>
+                                    </c:if>
+                                    <c:if test="${newUser.correoNoValido}" > 
+                                        <p class="informacion">Email no valido </p>
+                                    </c:if>
                                     <p>                                    
-                                        <label>Usuario*:</label>
-                                        <input type="text" name="usuario" maxlength="15"  value="${newUser.usuario}"/>
+                                        <label>Correo Electronico (Email)*:</label>
+                                        <input type="text" name="email" maxlength="15" value="${newUser.correo}"/>
                                     </p>
 
     
@@ -74,41 +71,26 @@
 
     
                                     
-                                    <%--Campo  pregunta --%>
-                                    <c:if test="${newUser.preguntaNoVacio}" > 
-                                        <p class="informacion">la pregunta para recordad no puede quedar vacio</p>
+                                    <%--Campo punk --%>
+                                    <c:if test="${newUser.punkNoVacio}" > 
+                                        <p class="informacion">el campo codigo punk no puede quedar vacio</p>
                                     </c:if>
                                     <p>                                    
-                                        <label>Pregunta para recordar*:</label>
-                                        <input type="text" name="pregunta" maxlength="15" value="${newUser.pregunta}"/>
+                                        <label>Codigo Punk*:</label>
+                                        <input type="text" name="punk" maxlength="15" value="${newUser.punk}"/>
                                     </p>
 
-
-
-                                    <%--Campo  repuesta --%>
-                                    <c:if test="${newUser.respuestaNoVacio}" > 
-                                        <p class="informacion"> no puede quedar vacio la respuesta </p>
+                                
+                                    <%--Repite punk --%>
+                                    <c:if test="${newUser.repitePunkNoCoincide}" > 
+                                        <p class="informacion">no coincide con el punk</p>
                                     </c:if>
                                     <p>                                    
-                                        <label>Respuesta*:</label>
-                                        <input type="text" name="respuesta" maxlength="15" value="${newUser.respuesta}"/>
+                                        <label>repite Codigo Punk*:</label>
+                                        <input type="text" name="repitePunk" maxlength="15" value="${newUser.repitePunk}"/>
                                     </p>
-                                    
     
                                     
-                                    <%--Campo  Email --%>
-                                    <c:if test="${newUser.correoNoVacio}" > 
-                                        <p class="informacion"> No puede quedar vacio Email </p>
-                                    </c:if>
-                                    <c:if test="${newUser.correoNoValido}" > 
-                                        <p class="informacion">Email no valido </p>
-                                    </c:if>
-                                    <p>                                    
-                                        <label>Correo Electronico (Email)*:</label>
-                                        <input type="text" name="email" maxlength="15" value="${newUser.correo}"/>
-                                    </p>
-                                    
-    
                                     
                                     <%--Campo  nombre --%>
                                     <c:if test="${newUser.nombreEmpiezaLetra}" > 
@@ -138,9 +120,11 @@
                                     </c:if>
                                     <p>                                    
                                         <label>Telefono: </label>
-                                        <input type="text" name="Telefono" maxlength="15" value="${newUser.telefono}"/>
+                                        <input type="text" name="telefono" maxlength="15" value="${newUser.telefono}"/>
                                     </p>
                                     
+                                    <%--Campo id --%>                                    
+                                    <imput type="hidden" name="id" value="${newUser.id}"/>
                                     
                                     <%--Boton --%>
                                     <div class="botones_formulario">

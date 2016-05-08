@@ -11,110 +11,90 @@ package g5appweb.vista.registro;
  */
 public class RegistroNewUserFrontBeans {
     
-    private String usuario;
-    private boolean usuarioNoVacio;
-    private boolean usuarioEmpiezaLetra;
-    private boolean usuarioYaExistente;
+
     
-    private String password;
-    private boolean passwordNoVacio;
-    private boolean passwordMin6;
-    
-    private String repPassword;
-    private boolean repPasswordCoincide;
-    
-    private String pregunta;
-    private boolean preguntaNoVacio;
-    
-    private String respuesta;
-    private boolean respuestaNoVacio;
-    
-    private String correo;
+     private String correo="";
     private boolean correoNoVacio;
     private boolean correoNoValido;
     
-    private String nombre;
+    private String password="";
+    private boolean passwordNoVacio;
+    private boolean passwordMin6;
+    
+    private String repPassword="";
+    private boolean repPasswordCoincide;
+    
+    private String punk="";
+    private boolean punkNoVacio;
+    
+    private String repitePunk="";
+    private boolean repitePunkNoCoincide;
+   
+    private String nombre="";
     private boolean nombreEmpiezaLetra;
     
-    private String apellidos;
+    private String apellidos="";
     private boolean apellidosEmpiezaLetra;
 
-    private String telefono;
+    private String telefono="";
     private boolean telefonoEmpiezaLetra;
 
     public RegistroNewUserFrontBeans() {
     
-        usuarioNoVacio=Boolean.FALSE;
-        usuarioEmpiezaLetra=Boolean.FALSE;
-        usuarioYaExistente=Boolean.FALSE;
         passwordNoVacio=Boolean.FALSE;
         passwordMin6=Boolean.FALSE;
+        punkNoVacio=Boolean.FALSE;
         repPasswordCoincide=Boolean.FALSE;
-        preguntaNoVacio=Boolean.FALSE;
-        respuestaNoVacio=Boolean.FALSE;
+        repitePunkNoCoincide=Boolean.FALSE;
         correoNoVacio=Boolean.FALSE;
         correoNoValido=Boolean.FALSE;
         nombreEmpiezaLetra=Boolean.FALSE;
         apellidosEmpiezaLetra=Boolean.FALSE;
         telefonoEmpiezaLetra=Boolean.FALSE;
-    }
-
-    
-    
-    /**
-     * @return the usuario
-     */
-    public String getUsuario() {
-        return usuario;
+        
+        
     }
 
     /**
-     * @param usuario the usuario to set
+     * @return the correo
      */
-    public void setUsuario(String usuario) {
-        this.usuario = usuario;
+    public String getCorreo() {
+        return correo;
     }
 
     /**
-     * @return the usuarioNoVacio
+     * @param correo the correo to set
      */
-    public boolean isUsuarioNoVacio() {
-        return usuarioNoVacio;
+    public void setCorreo(String correo) {
+        this.correo = correo;
     }
 
     /**
-     * @param usuarioNoVacio the usuarioNoVacio to set
+     * @return the correoNoVacio
      */
-    public void setUsuarioNoVacio(boolean usuarioNoVacio) {
-        this.usuarioNoVacio = usuarioNoVacio;
+    public boolean isCorreoNoVacio() {
+        return correoNoVacio;
     }
 
     /**
-     * @return the usuarioEmpiezaLetra
+     * @param correoNoVacio the correoNoVacio to set
      */
-    public boolean isUsuarioEmpiezaLetra() {
-        return usuarioEmpiezaLetra;
+    public void setCorreoNoVacio(boolean correoNoVacio) {
+        this.correoNoVacio = correoNoVacio;
     }
 
     /**
-     * @param usuarioEmpiezaLetra the usuarioEmpiezaLetra to set
+     * @return the correoNoValido
      */
-    public void setUsuarioEmpiezaLetra(boolean usuarioEmpiezaLetra) {
-        this.usuarioEmpiezaLetra = usuarioEmpiezaLetra;
+    public boolean isCorreoNoValido() {
+        return correoNoValido;
     }
 
     /**
-     * @return the usuarioYaExistente
+     * @param correoNoValido the correoNoValido to set
      */
-    public boolean isUsuarioYaExistente() {
-        return usuarioYaExistente;
-    }
-
-    /**
-     * @param usuarioYaExistente the usuarioYaExistente to set
-     */
-    public void setUsuarioYaExistente(boolean usuarioYaExistente) {
-        this.usuarioYaExistente = usuarioYaExistente;
+    public void setCorreoNoValido(boolean correoNoValido) {
+        this.correoNoValido = correoNoValido;
     }
 
     /**
@@ -188,101 +168,59 @@ public class RegistroNewUserFrontBeans {
     }
 
     /**
-     * @return the pregunta
+     * @return the punk
      */
-    public String getPregunta() {
-        return pregunta;
+    public String getPunk() {
+        return punk;
     }
 
     /**
-     * @param pregunta the pregunta to set
+     * @param punk the punk to set
      */
-    public void setPregunta(String pregunta) {
-        this.pregunta = pregunta;
+    public void setPunk(String punk) {
+        this.punk = punk;
     }
 
     /**
-     * @return the preguntaNoVacio
+     * @return the punkNoVacio
      */
-    public boolean isPreguntaNoVacio() {
-        return preguntaNoVacio;
+    public boolean isPunkNoVacio() {
+        return punkNoVacio;
     }
 
     /**
-     * @param preguntaNoVacio the preguntaNoVacio to set
+     * @param punkNoVacio the punkNoVacio to set
      */
-    public void setPreguntaNoVacio(boolean preguntaNoVacio) {
-        this.preguntaNoVacio = preguntaNoVacio;
+    public void setPunkNoVacio(boolean punkNoVacio) {
+        this.punkNoVacio = punkNoVacio;
     }
 
     /**
-     * @return the respuesta
+     * @return the repitePunk
      */
-    public String getRespuesta() {
-        return respuesta;
+    public String getRepitePunk() {
+        return repitePunk;
     }
 
     /**
-     * @param respuesta the respuesta to set
+     * @param repitePunk the repitePunk to set
      */
-    public void setRespuesta(String respuesta) {
-        this.respuesta = respuesta;
+    public void setRepitePunk(String repitePunk) {
+        this.repitePunk = repitePunk;
     }
 
     /**
-     * @return the respuestaNoVacio
+     * @return the repitePunkNoCoincide
      */
-    public boolean isRespuestaNoVacio() {
-        return respuestaNoVacio;
+    public boolean isRepitePunkNoCoincide() {
+        return repitePunkNoCoincide;
     }
 
     /**
-     * @param respuestaNoVacio the respuestaNoVacio to set
+     * @param repitePunkNoCoincide the repitePunkNoCoincide to set
      */
-    public void setRespuestaNoVacio(boolean respuestaNoVacio) {
-        this.respuestaNoVacio = respuestaNoVacio;
-    }
-
-    /**
-     * @return the correo
-     */
-    public String getCorreo() {
-        return correo;
-    }
-
-    /**
-     * @param correo the correo to set
-     */
-    public void setCorreo(String correo) {
-        this.correo = correo;
-    }
-
-    /**
-     * @return the correoNoVacio
-     */
-    public boolean isCorreoNoVacio() {
-        return correoNoVacio;
-    }
-
-    /**
-     * @param correoNoVacio the correoNoVacio to set
-     */
-    public void setCorreoNoVacio(boolean correoNoVacio) {
-        this.correoNoVacio = correoNoVacio;
-    }
-
-    /**
-     * @return the correoNoValido
-     */
-    public boolean isCorreoNoValido() {
-        return correoNoValido;
-    }
-
-    /**
-     * @param correoNoValido the correoNoValido to set
-     */
-    public void setCorreoNoValido(boolean correoNoValido) {
-        this.correoNoValido = correoNoValido;
+    public void setRepitePunkNoCoincide(boolean repitePunkNoCoincide) {
+        this.repitePunkNoCoincide = repitePunkNoCoincide;
     }
 
     /**
@@ -370,4 +308,5 @@ public class RegistroNewUserFrontBeans {
     }
 
     
+      
 }

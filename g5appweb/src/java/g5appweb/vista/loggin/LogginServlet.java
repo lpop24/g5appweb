@@ -5,6 +5,7 @@
  */
 package g5appweb.vista.loggin;
 
+import g5appweb.controlador.interfaz.logginCTRI;
 import g5appweb.modelo.Usuario;
 import java.io.IOException;
 import java.io.PrintWriter;
@@ -91,7 +92,9 @@ public class LogginServlet extends HttpServlet {
                 || (login.getEmail().charAt(0)==chVal6)
                 || (login.getEmail().charAt(0)==chVal7)
                 || (login.getEmail().charAt(0)==chVal8)){
-                       System.out.println(login.getPassword().charAt(0));     
+                       System.out.println(login.getPassword().charAt(0)); 
+                       //logginCTRI d= null;
+                       //usuario= d.loggin(login);
                       //////////////////////////////////////////////////////////////////////////////
                       //TODO: preguntar en la permanencia si esta el usuario que login ha traido  //
                       //////////////////////////////////////////////////////////////////////////////                    
